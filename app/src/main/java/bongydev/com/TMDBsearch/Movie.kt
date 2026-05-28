@@ -17,7 +17,25 @@ data class MovieSearchResponse(
 
 data class MovieDetails(
     val id: Int,
+    val title: String,
+    val poster_path: String?,
+    val release_date: String,
+    val overview: String,
+    val vote_average: Double,
     val imdb_id: String?
+)
+
+data class FindByImdbIdResponse(
+    val movie_results: List<MovieResult>
+)
+
+data class MovieResult(
+    val id: Int,
+    val title: String,
+    val poster_path: String?,
+    val release_date: String,
+    val overview: String,
+    val vote_average: Double
 )
 
 data class Genre(
