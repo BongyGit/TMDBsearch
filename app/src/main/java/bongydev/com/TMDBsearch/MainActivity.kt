@@ -75,8 +75,8 @@ class MainActivity : AppCompatActivity() {
                         // Fetch IMDB IDs for each movie
                         val moviesWithImdbId = results.map { movie ->
                             val detailsResponse = tmdbApi.getMovieDetails(movie.id)
-                            val imdbId = if (detailsResponse.isSuccessful && detailsResponse.body() != null) {
-                                detailsResponse.body()!!.imdb_id
+                            val imdbId = if (detailsResponse.isSuccessful) {
+                                detailsResponse.body()?.imdb_id ?: "N/A"
                             } else {
                                 "N/A"
                             }
