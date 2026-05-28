@@ -16,4 +16,10 @@ interface TMDBService {
     suspend fun getMovieDetails(
         @Path("movie_id") movieId: Int
     ): Response<MovieDetails>
+
+    @GET("find/{external_id}")
+    suspend fun findByImdbId(
+        @Path("external_id") externalId: String,
+        @Query("external_source") externalSource: String = "imdb_id"
+    ): Response<FindByImdbIdResponse>
 }
