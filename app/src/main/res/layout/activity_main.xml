@@ -7,6 +7,7 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <!-- Search by Name Section -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +44,32 @@
         android:id="@+id/btnSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:text="Search by Name"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Search by IMDB ID Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter IMDB ID:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etImdbId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="IMDB ID (e.g., tt1375666)"
+        android:inputType="text"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnSearchImdbId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search by IMDBid"
         android:textSize="16sp"
         android:layout_marginBottom="24dp" />
 
